@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
         {
             myRigidbody.velocity += friction;
         }
-        else if
+        else if(myRigidbody.velocity.x < 0)
         {
             myRigidbody.velocity -= friction;
         }
