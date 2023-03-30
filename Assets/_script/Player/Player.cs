@@ -20,6 +20,10 @@ public class Player : MonoBehaviour
     public float AnimationDuration = .3f;
     public Ease ease = Ease.OutBack;
 
+    [Header("Animation player")]
+    public string boolRun = "Run";
+    public Animator animator;
+    public float playerSwipeDuration = .1f;
 
     private float _currentSpeed;
 
@@ -41,15 +45,28 @@ public class Player : MonoBehaviour
             //myRigidbody.MovePosition(myRigidbody.position - velocity * Time.deltaTime);
             //codigo de referencia.
             myRigidbody.velocity = new Vector2(-_currentSpeed, myRigidbody.velocity.y);
-
+            if(myRigidbody.transform.localScale.x != -1)
+            {
+                myRigidbody.transform.DOScaleX(-1, playerSwipeDuration);
+            }
+            animator.SetBool(boolRun, true);
         }
         else if(Input.GetKey(KeyCode.RightArrow))
         {
             //myRigidbody.MovePosition(myRigidbody.position + velocity * Time.deltaTime);
             //codigo de referencia.
             myRigidbody.velocity = new Vector2(_currentSpeed, myRigidbody.velocity.y);
-
+            if(myRigidbody.transform.localScale.x != 1)
+            {
+                myRigidbody.transform.DOScaleX(1, playerSwipeDuration);
+            }
+            animator.SetBool(boolRun, true);
         }
+        else
+        {
+            animator.SetBool(boolRun, false);
+        }
+        
 
         if(myRigidbody.velocity.x > 0)
         {
