@@ -6,6 +6,8 @@ public class EnemyBase : MonoBehaviour
 {
     public int damage = 10;
 
+    public Animator animator;
+    public string triggerAttack = "Attack";
 
     private void OnCollisionEnter2D(Collision2D collision) 
     {
@@ -15,7 +17,13 @@ public class EnemyBase : MonoBehaviour
 
         if(health != null)
         {
-            health.Damage(damage);                
+            health.Damage(damage);   
+            PLayAttackAnimation();             
         }
+    }
+
+    private void PLayAttackAnimation()
+    {
+        animator.SetTrigger(triggerAttack);
     }
 }
