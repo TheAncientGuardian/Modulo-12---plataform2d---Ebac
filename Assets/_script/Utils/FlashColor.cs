@@ -12,6 +12,10 @@ public class FlashColor : MonoBehaviour
 
     private void OnValidate() 
     {
+        if(spriteRenderers == null)
+            spriteRenderers = new List<SpriteRenderer>();
+        spriteRenderers.Clear();    
+        
         foreach(var child in transform.GetComponentsInChildren<SpriteRenderer>())
         {
             spriteRenderers.Add(child);
