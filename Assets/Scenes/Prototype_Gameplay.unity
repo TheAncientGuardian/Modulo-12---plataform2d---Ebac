@@ -2052,7 +2052,7 @@ GameObject:
   - component: {fileID: 720281157}
   m_Layer: 0
   m_Name: SPR_Floor
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2194,7 +2194,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 11.891609, y: 1.3867385}
+  m_Offset: {x: 11.891609, y: 0.21}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3487,7 +3487,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0}
   speed: 10
   speedRun: 15
-  forceJump: 7
+  forceJump: 11
   JumpScaleY: 1.2
   JumpScaleX: 0.7
   AnimationDuration: 0.3

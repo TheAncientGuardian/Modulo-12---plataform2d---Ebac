@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
 {   
     public Rigidbody2D myRigidbody;
     public HealthBase healthBase;
+
+    private bool isJumping;
     
     [Header("Speed Setup")]
     public Vector2 friction = new Vector2(.1f, 0);
@@ -99,7 +101,7 @@ public class Player : MonoBehaviour
 
     private void HandleJump()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && !isJumping)
         {
             myRigidbody.velocity = Vector2.up * forceJump;
             myRigidbody.transform.localScale = Vector2.one;
@@ -107,6 +109,15 @@ public class Player : MonoBehaviour
             DOTween.Kill(myRigidbody.transform);
 
             HandleScaleJump();
+            isJumping = true;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D other) 
+    {
+        if(other.gameObject.CompareTag("Ground"))
+        {
+            isJumping = false;
         }
     }
 
