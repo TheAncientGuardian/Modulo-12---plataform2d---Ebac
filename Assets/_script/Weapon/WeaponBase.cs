@@ -7,7 +7,7 @@ public class WeaponBase : MonoBehaviour
     public ProjectileBase prefabProjectile;
 
     public Transform positionToShoot;
-    public float timeBetweenShoot = 1f;
+    public float timeBetweenShoot = .3f;
     public Transform playerSideReference;
 
     private Coroutine _currentCoroutine;
