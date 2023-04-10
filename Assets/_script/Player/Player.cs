@@ -10,14 +10,33 @@ public class Player : MonoBehaviour
 
     private bool isJumping;
     
-    
+    [Header("Speed Setup")]
+    public Vector2 friction = new Vector2(.1f, 0);
+    public Vector2 velocity;
+    public float speed;
+    public float speedRun;
+    public float forceJump;
+
+
+    [Header("Animation Setup")]
+    //public float JumpScaleY = 1.5f;
+    //public float JumpScaleX = .7f;
+    //public float AnimationDuration = .3f;
     public SOFloat soJumpScaleY;
     public SOFloat soJumpScaleX;
     public SOFloat soAnimationDuration;
 
+
+    public Ease ease = Ease.OutBack;
+
+    [Header("Animation player")]
+    public string boolRun = "Run";
+    public string triggerDeath = "Death";
+    public Animator animator;
+    public float playerSwipeDuration = .1f;
+
     private float _currentSpeed;
 
-    public Animator animator;
 
     private void Awake() 
     {
