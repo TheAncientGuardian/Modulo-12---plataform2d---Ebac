@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
 
 
     [Header("Animation Setup")]
+<<<<<<< HEAD
     //public float JumpScaleY = 1.5f;
     //public float JumpScaleX = .7f;
     //public float AnimationDuration = .3f;
@@ -27,6 +28,11 @@ public class Player : MonoBehaviour
     public SOFloat soAnimationDuration;
 
 
+=======
+    public float JumpScaleY = 1.5f;
+    public float JumpScaleX = .7f;
+    public float AnimationDuration = .3f;
+>>>>>>> parent of e1cc45b (Player configurations as a Scriptable object)
     public Ease ease = Ease.OutBack;
 
     [Header("Animation player")]
@@ -128,8 +134,8 @@ public class Player : MonoBehaviour
 
     private void HandleScaleJump()
     {
-        myRigidbody.transform.DOScaleY(soJumpScaleY.value, soAnimationDuration.value).SetLoops(2, LoopType.Yoyo).SetEase(ease);
-        myRigidbody.transform.DOScaleX(soJumpScaleX.value, soAnimationDuration.value).SetLoops(2, LoopType.Yoyo).SetEase(ease);
+        myRigidbody.transform.DOScaleY(JumpScaleY, AnimationDuration).SetLoops(2, LoopType.Yoyo).SetEase(ease);
+        myRigidbody.transform.DOScaleX(JumpScaleX, AnimationDuration).SetLoops(2, LoopType.Yoyo).SetEase(ease);
 
     }
 
