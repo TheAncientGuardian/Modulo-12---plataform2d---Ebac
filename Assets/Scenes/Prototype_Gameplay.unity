@@ -3483,19 +3483,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRigidbody: {fileID: 937871226}
   healthBase: {fileID: 937871230}
-  friction: {x: -0.3, y: 0}
-  velocity: {x: 0, y: 0}
-  speed: 10
-  speedRun: 15
-  forceJump: 11
-  JumpScaleY: 1.2
-  JumpScaleX: 0.7
-  AnimationDuration: 0.3
-  ease: 27
-  boolRun: Run
-  triggerDeath: Death
+  soPlayerSetup: {fileID: 11400000, guid: e7e3957812f42824fbc322ca11dc8514, type: 2}
   animator: {fileID: 1888432964}
-  playerSwipeDuration: 0.5
 --- !u!114 &937871230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3508,9 +3497,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 623692f45158c5c4f8b68223c8480370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startLife: 10
+  startLife: 5
   destroyOnKill: 0
-  delayToKill: 2
+  delayToKill: 1
   _flashColor: {fileID: 1888432966}
 --- !u!212 &996551632 stripped
 SpriteRenderer:
