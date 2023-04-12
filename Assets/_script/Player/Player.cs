@@ -19,6 +19,10 @@ public class Player : MonoBehaviour
 
 
     [Header("Animation Setup")]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> parent of df518a1 (Aula 5 Mod 17)
     //public float JumpScaleY = 1.5f;
     //public float JumpScaleX = .7f;
     //public float AnimationDuration = .3f;
@@ -27,6 +31,14 @@ public class Player : MonoBehaviour
     public SOFloat soAnimationDuration;
 
 
+<<<<<<< HEAD
+=======
+=======
+    public float JumpScaleY = 1.5f;
+    public float JumpScaleX = .7f;
+    public float AnimationDuration = .3f;
+>>>>>>> parent of e1cc45b (Player configurations as a Scriptable object)
+>>>>>>> parent of df518a1 (Aula 5 Mod 17)
     public Ease ease = Ease.OutBack;
 
     [Header("Animation player")]
@@ -37,8 +49,11 @@ public class Player : MonoBehaviour
 
     private float _currentSpeed;
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     //public Animator animator;
+=======
+>>>>>>> parent of df518a1 (Aula 5 Mod 17)
 =======
 >>>>>>> parent of df518a1 (Aula 5 Mod 17)
 
@@ -133,8 +148,13 @@ public class Player : MonoBehaviour
 
     private void HandleScaleJump()
     {
+<<<<<<< HEAD
         myRigidbody.transform.DOScaleY(soJumpScaleY.value, soAnimationDuration.value).SetLoops(2, LoopType.Yoyo).SetEase(ease);
         myRigidbody.transform.DOScaleX(soJumpScaleX.value, soAnimationDuration.value).SetLoops(2, LoopType.Yoyo).SetEase(ease);
+=======
+        myRigidbody.transform.DOScaleY(JumpScaleY, AnimationDuration).SetLoops(2, LoopType.Yoyo).SetEase(ease);
+        myRigidbody.transform.DOScaleX(JumpScaleX, AnimationDuration).SetLoops(2, LoopType.Yoyo).SetEase(ease);
+>>>>>>> parent of df518a1 (Aula 5 Mod 17)
 
     }
 
