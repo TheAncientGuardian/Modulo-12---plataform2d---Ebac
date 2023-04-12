@@ -911,7 +911,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8007466312498025151
 Transform:
   m_ObjectHideFlags: 0
@@ -991,7 +991,7 @@ MonoBehaviour:
   - {fileID: 1918426282720007879}
   - {fileID: 7274142433465299202}
   - {fileID: 4989476794605110809}
-  color: {r: 0.8773585, g: 0.28555536, b: 0.28555536, a: 1}
+  color: {r: 0.28627446, g: 0.8784314, b: 0.73914367, a: 1}
   duration: 0.3
 --- !u!114 &6942088795415889320
 MonoBehaviour:
