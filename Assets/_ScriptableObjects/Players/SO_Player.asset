@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 911ffb9c3d76f3345a944cf129d89023, type: 3}
-  m_Name: SO_Player_02
+  m_Name: SO_Player
   m_EditorClassIdentifier: 
   friction: {x: -0.3, y: 0}
   velocity: {x: 0, y: 0}
